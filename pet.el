@@ -68,8 +68,8 @@ You can customize the arguments that will be passed to the
 program by adjusting `pet-toml-to-json-program-arguments'"
   :group 'pet
   :type '(choice (const "dasel")
-                 (const "tomljson")
-                 (string :tag "Other")))
+          (const "tomljson")
+          (string :tag "Other")))
 
 (defcustom pet-toml-to-json-program-arguments '("-f" "-" "-r" "toml" "-w" "json")
   "Arguments for `pet-toml-to-json-program'."
@@ -86,8 +86,8 @@ You can customize the arguments that will be passed to the
 program by adjusting `pet-yaml-to-json-program-arguments'"
   :group 'pet
   :type '(choice (const "dasel")
-                 (const "yq")
-                 (string :tag "Other")))
+          (const "yq")
+          (string :tag "Other")))
 
 (defcustom pet-yaml-to-json-program-arguments '("-f" "-" "-r" "yaml" "-w" "json")
   "Arguments for `pet-yaml-to-json-program'."
@@ -108,7 +108,7 @@ and nil otherwise."
                          (const pet-find-file-from-project-root-recursively)
                          function)))
 
-(defcustom pet-venv-dir-names '(".venv" "venv" "env")
+(defcustom pet-venv-dir-names '("." ".venv" "venv" "env")
   "Directory names to search for when looking for a virtualenv at the project root."
   :group 'pet
   :type '(repeat string))
